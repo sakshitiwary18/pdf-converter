@@ -1,0 +1,21 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JPG to PDF Converter</title>
+    <!-- Link to the CSS file using Flask's url_for function -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Welcome to the JPG to PDF Converter!</h1>
+    <form action="/convert" method="POST" enctype="multipart/form-data">
+        <label for="images">Select images to convert to PDF:</label>
+        <input type="file" name="images" id="images" multiple required>
+        <br>
+        <button type="submit">Convert to PDF</button>
+    </form>
+</body>
+</html>
+
